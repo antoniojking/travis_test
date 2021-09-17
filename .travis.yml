@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+- 2.0.0
+- 1.9.3
+- jruby-19mode
+- rbx-2
+deploy:
+  provider: heroku
+  api_key:
+    secure: qsde3SDq8mpJq2JAsTbwo1iJWnWKnUSOdATZuj2jEnKtcKSq6f48VKZLFtxo04kzhsnS+BYS/3gsHexm5aCYLj8YBZbEjrgatjtvRhE4xNochxBtbaZWfWEoZISKsw7mi75ZlonWu/89I8DpIEJcMf2D4q/jqnj7Yh4q0rXXNB7od9vWJwepTLrMMgY7vVIgkc12Eyfw/FcY8kIKQOiDh1JuUSrzjlvmQnFcv750IxUwAYc5mdn07u6p1rhw+qBk/tXIkyf/pktIipPw91lMvbPBdXZc7wfJanG11d8A6Xfy7kCo8NJm41B5skfSzxq0C9mbDE61lyCdtkxphrVTu6u32sw2jsZCt7XpBoJGK2r6gqELlN93yVWqhPYWRNPgrWz8NFCPiSMVc2Zxv5CGXt7UJrQ2xZ2YoscyqnxkytKOoAo4WoCpbIQvV9+RfubaWaFniVC3mfwm2lw1lVctuJctilMrS15AZTqk/uvBWYbyyJjcHOB1Ik6MCVA4Fr1urB93aeuLQ/YEP3uTe74v7XvJdIXjc4TySAvppD6vHybNBTIe1VJJz+5yKF91gA+7pKAJKsY5PZLahcCahprz+L0ZNlpE7/IfABATrRFzpWXoindvH/lRGtEnzLMhNGxvUIPS+YUxsVFKRSM37wvGxArEXXGN9NyCSF7yAWo3xW8=
+  app: travis-test-ajk
+  run: rails db:migrate
+  on:
+    repo: antoniojking/travis_test
+    branch: main
+env:
+  global:
+  - secure: 
