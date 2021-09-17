@@ -1,0 +1,11 @@
+<h2>User Index Page</h2>
+
+<% @users.each do |user| %>
+  <div id="user-<%= user.id %>">
+    <p>
+      <b><%= user.name %></b><br>
+         <%= user.age %><br>
+         <%= user.location %>
+    </p>
+  </div>
+<% end %>
